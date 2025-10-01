@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //=====================================================================//
 
 // All styling for my Resume - App // 
@@ -5,12 +6,15 @@
 //=====================================================================//
 
 
+=======
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
 }
+<<<<<<< HEAD
 
 main {
   background-color: var(--color-primary);
@@ -24,6 +28,14 @@ main {
 :root {
   --color-primary: #191d2b;
   --color-secondary: #9eae27; 
+=======
+ 
+          
+         
+:root {
+  --color-primary: #191d2b;
+  --color-secondary: #27ae60; 
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
   --color-secondary1: #6ed89b;
   --color-secondary2: #a2e6c0;
   --color-secondary3:  #d3f5e0;
@@ -38,40 +50,72 @@ main {
   --color-grey6: #12181b;
 }
 
+<<<<<<< HEAD
 
 //=====================================================================//
 //----Toggle button light colors------//
+=======
+//=====================================================================//
+
+main {
+  background-color: var(--color-primary);
+  min-height: 100vh; /* make it cover the full viewport */
+}
+
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
 //=====================================================================//
 
 
 .light-mode {
   --color-primary: #f3f5fa;
+<<<<<<< HEAD
   --color-secondary: #2fe041;
   --color-secondary1: #f3a8f0;  
   --color-secondary2: #ffd6f7;  
   --color-secondary3: #f0b0ff;  
+=======
+  --color-secondary: #e02fd7;
+  --color-secondary1: #f3a8f0;  /* lighter pink/purple */
+  --color-secondary2: #ffd6f7;  /* very soft pastel */
+  --color-secondary3: #f0b0ff;  /* soft vibrant accent */
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
   --color-white: #121111;
   --color-black: #000;
   --color-grey0: #f8f8f8;
   --color-grey1: #0875f2;
   --color-grey2: #909087;
   --color-grey3: #dcb5b6;
+<<<<<<< HEAD
   --color-grey4: #e683dc;
   // --color-grey5: #d3c0d0;
   --color-grey5: #e4dfe3;
+=======
+  --color-grey4: #1c03d4;
+  --color-grey5: #a4a4a0;
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
   --color-grey6: #12181b;
 }
 
 //=====================================================================//
+<<<<<<< HEAD
 //----Toggle Button------//
 //=====================================================================//
 .toggle-div {
   flex-shrink: 0;           // Prevent shrinking in a flex container
+=======
+
+
+  /* toggle-button.scss */
+
+.toggle-div {
+  position: relative;
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
   width: 50px;
   height: 50px;
   background-color: var(--color-secondary);
   border-radius: 50%;
   cursor: pointer;
+<<<<<<< HEAD
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,14 +130,39 @@ main {
   @media (max-width: 700px) {
     width: 40px;            // slightly smaller
     height: 40px;
+=======
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    background-color: #4caf50; // Active color
+  }
+  &:hover {
+    background-color: darken(#ccc, 10%);
+  }
+
+  span {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+    
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
   }
 }
 
 
 
 //=====================================================================//
+<<<<<<< HEAD
 //----Indpendent button------//
 //=====================================================================//
+=======
+
+
+  /* Indpendent button variable */
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
 
 .btn-con {
   display: flex;
@@ -103,6 +172,10 @@ main {
 .main-btn {
   border-radius: 30px;
   font-weight: 600;
+<<<<<<< HEAD
+=======
+  // color: inherit;
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
   color: var(--color-white);
   position: relative;
   border: 1px solid var(--color-secondary);
@@ -152,14 +225,23 @@ main {
 }
 
 button {
+<<<<<<< HEAD
   all: unset; // Removes all browser styles 
+=======
+  all: unset; /* Removes all browser styles */
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
   display: block;
 }
 
 //=====================================================================//
+<<<<<<< HEAD
 //----NavBar Section------//
 //=====================================================================//
 
+=======
+
+//----NavBar Syles------
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
 .navbar {
   display: flex;
   justify-content:space-around;
@@ -178,6 +260,20 @@ button {
   color: var(--color-secondary);      
 }
 
+<<<<<<< HEAD
+=======
+// .logo {
+//   font-size: 1.5rem;
+//   font-weight: bold;
+//   display: flex;
+//   align-items: center;
+//   gap: 8px;
+//   font-weight: bold;
+//   font-size: 1.2rem;
+//   color: var(--secondary); 
+// }
+
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
 .navbar .navLinks {
   list-style: none;
   display: flex;
@@ -186,7 +282,10 @@ button {
 
 .navbar .navLinks li a {
   color: var(--color-white);
+<<<<<<< HEAD
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+=======
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -217,11 +316,20 @@ button {
 }
 
 //=====================================================================//
+<<<<<<< HEAD
 //----About Section------//
 //=====================================================================//
 
 .about-section {
   padding: 4rem 2rem;
+=======
+
+/* About styles */
+
+.about-section {
+  padding: 4rem 2rem;
+  // background-color: #f9fafb;
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
 
   .about-grid {
     display: grid;
@@ -241,7 +349,12 @@ button {
       border-radius: 12px;
       object-fit: cover;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+<<<<<<< HEAD
       border: 2px solid transparent; 
+=======
+      // transition: all 0.4s ease-in-out;
+      border: 2px solid transparent; // baseline border to avoid layout shift
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
       transition: filter 0.4s ease-in-out, border-color 0.4s ease-in-out;
       filter: grayscale(100%);
       &:hover {
@@ -298,9 +411,14 @@ button {
 }
 
 //=====================================================================//
+<<<<<<< HEAD
 //----Project Section------//
 //=====================================================================//
 
+=======
+
+/* Projects Section Styles */
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
 .projects-section {
   padding: 4rem 2rem;
   text-align: center;
@@ -434,6 +552,7 @@ button {
   }
 }
 
+<<<<<<< HEAD
 
 //=====================================================================//
 //----Contact Syles------//
@@ -442,6 +561,17 @@ button {
 .contact-section {
   padding: 4rem 2rem;
   text-align: center;
+=======
+//=====================================================================//
+
+/* Contact styles */
+
+.contact-section {
+  padding: 4rem 2rem;
+  // background-color: #f3f4f6;
+  text-align: center;
+
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
   h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -462,9 +592,15 @@ button {
 
   p {
     font-size: 1rem;
+<<<<<<< HEAD
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin-bottom: 2rem;
     color: var(--color-grey2);
+=======
+    margin-bottom: 2rem;
+    color: #4b5563;
+    color: var(--color-grey3);
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
     max-width: 600px;
     margin: 0.5rem auto 2rem;
     line-height: 1.5;
@@ -478,8 +614,14 @@ button {
     max-width: 500px;
     margin: 0 auto 2rem auto;
     padding: 2rem;
+<<<<<<< HEAD
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+=======
+    background-color: var(--color-grey4); /* dark card background */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* floating effect */
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
 
     input,
     textarea {
@@ -488,14 +630,23 @@ button {
       border-radius: 8px;
       font-size: 1rem;
       width: 100%;
+<<<<<<< HEAD
       background-color: var(--color-grey5);
+=======
+      background-color: var(--color-grey4);
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
       color: var(--color-white);
     }
 
     button {
       padding: 0.8rem 1rem;
+<<<<<<< HEAD
       background-color: var(--color-grey5);
       color: var(--color-white);
+=======
+      background-color: var(--color-primary);
+      color: white;
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
       font-size: 1rem;
       border: none;
       border-radius: 8px;
@@ -515,6 +666,7 @@ button {
     flex-wrap: wrap;
 
     a {
+<<<<<<< HEAD
     display: flex;
     align-items: center;   
     justify-content: center; 
@@ -526,6 +678,21 @@ button {
     text-decoration: none;
     font-size: 1.5rem;    
     transition: background 0.3s;
+=======
+     display: flex;
+    align-items: center;   // vertically center
+    justify-content: center; // horizontally center
+    width: 50px;           // optional fixed width for square buttons
+    height: 50px;          // optional fixed height for square buttons
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 50%;    // make it circular
+    text-decoration: none;
+    font-size: 1.5rem;     // icon size
+    transition: background 0.3s;
+
+
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
       &:hover {
         background-color: var(--color-secondary);
       }
@@ -540,6 +707,7 @@ button {
   }
 }
 
+<<<<<<< HEAD
 
 
 //=====================================================================//
@@ -611,6 +779,15 @@ button {
 .footer {
   background-color: var(--color-primary);
   color: var(--color-white);
+=======
+//=====================================================================//
+
+/* Footer styles */
+
+.footer {
+  background-color: var(--color-primary);
+  color: #ffffff;
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
   padding: 2rem 1rem;
   text-align: center;
 
@@ -624,7 +801,10 @@ button {
     p {
       margin: 0;
       font-size: 0.9rem;
+<<<<<<< HEAD
       font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+=======
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
     }
 
     .footer-links,
@@ -635,10 +815,16 @@ button {
       flex-wrap: wrap;
 
       a {
+<<<<<<< HEAD
         color: var(--color-white);
         text-decoration: none;
         transition: color 0.3s;
         font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+=======
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s;
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
 
         &:hover {
           color: var(--color-secondary);
@@ -646,13 +832,20 @@ button {
       }
     }
   }
+<<<<<<< HEAD
   /* Responsive small screens */
+=======
+}
+
+/* Responsive small screens */
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
 @media (max-width: 768px) {
   .footer-content {
     gap: 0.5rem;
   }
 }
 
+<<<<<<< HEAD
 }
 
 //=====================================================================//
@@ -685,10 +878,30 @@ button {
       content: "";
       display: block;
       width: 164px;
+=======
+//=====================================================================//
+
+// Digital Skills Syling
+
+.section-title {
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--color-white);
+  // display: inline-block;
+  
+
+  &::after {
+      content: "";
+      display: block;
+      width: 100%;
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
       height: 3px;
       margin: 0.5rem auto 0;
       background: var(--color-secondary);
       border-radius: 2px;
+<<<<<<< HEAD
     }
   }
 
@@ -758,6 +971,69 @@ button {
 
     .education-grid {
       grid-template-columns: 1fr; 
+=======
+       width: 60%;               // relative to text width
+    max-width: 180px; 
+    }
+}
+
+.skills-container {
+  max-width: 600px;
+  margin: auto;
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem; // add some horizontal padding for small screens
+
+  .skill-bar {
+    width: 100%; // ensure full width on small screens
+
+    .skill-title {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: var(--color-grey2);
+      text-align: left;
+      font-size: 1.0rem;
+
+      @media (max-width: 480px) {
+        font-size: 1rem; // smaller text on mobile
+      }
+    }
+
+    .progress-container {
+      background: #333;
+      border-radius: 12px;
+      // height: 20px;
+      overflow: hidden;
+
+      .progress-filled {
+        background: linear-gradient(
+          45deg,
+          var(--color-secondary),
+          var(--color-secondary1),
+          var(--color-secondary2),
+          var(--color-secondary3),
+        );
+        height: 100%;
+        width: 0;
+        border-radius: 12px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 0.5rem;
+        color: var(--color-grey4);
+        font-weight: bold;
+        transition: width 1s ease-in-out;
+
+        .percent {
+          font-size: 0.8rem;
+
+          @media (max-width: 480px) {
+            font-size: 0.7rem; // smaller percent text on mobile
+          }
+        }
+      }
+>>>>>>> 97b874d3576499051763889123d9da03c956101e
     }
   }
 }
