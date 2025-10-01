@@ -53,7 +53,6 @@ export default function Contact() {
         ></textarea>
         <button type="submit">Send Message</button>
       </form>
-
       <div className="contact-links">
         <a href="mailto:your@email.com"><MdEmail  /></a>
         <a href="https://github.com/Nk6513" target="_blank" rel="noopener noreferrer">

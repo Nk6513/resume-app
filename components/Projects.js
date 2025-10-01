@@ -9,7 +9,7 @@ export default function Projects() {
       description: "My personal portfolio built with React and Material UI.",
       github: "https://github.com/Nk6513/Event_ReactApp",
       live: "",
-      img: "/EventBooking.png",
+      img: "/eventBooking.jpg",
     },
     {
       id: 2,
@@ -17,7 +17,7 @@ export default function Projects() {
       description: "A simple pizza restaurant website built thoroughly with PHP.",
       github: "https://github.com/Nk6513/Pizza-Hub",
       live: "",
-      img: "/Pizza.svg", 
+      img: "/Pizzza.svg", 
     },
   ];
 
