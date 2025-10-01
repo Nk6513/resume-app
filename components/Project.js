@@ -9,23 +9,15 @@ export default function Projects() {
       description: "My personal portfolio built with React and Material UI.",
       github: "https://github.com/Nk6513/Event_ReactApp",
       live: "",
-<<<<<<< HEAD
-      img: "/eventBooking.jpg",
-=======
       img: "/EventBooking.png",
->>>>>>> 97b874d3576499051763889123d9da03c956101e
     },
     {
       id: 2,
       title: "Pizza Hub",
       description: "A simple pizza restaurant website built thoroughly with PHP.",
-<<<<<<< HEAD
       github: "https://github.com/Nk6513/Pizza-Hub",
-=======
-      github: "https://github.com/username/todo-app",
->>>>>>> 97b874d3576499051763889123d9da03c956101e
       live: "",
-      img: "/Pizzza.svg", 
+      img: "/Pizza.svg", 
     },
   ];
 
@@ -44,7 +36,6 @@ export default function Projects() {
                     alt={project.title}
                     width={400}
                     height={200}
-                    
                   />
                 </div>
               )}
@@ -75,4 +66,3 @@ export default function Projects() {
     </section>
   );
 }
-    
