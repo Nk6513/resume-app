@@ -15,10 +15,25 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Your message has been received");
-    setFormData({ name: "", email: "", message: "" });
+
+    try {
+      const res = await fetch("https://formspree.io/f/xovngggr", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        alert("Your message has been sent!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (err) {
+      alert("Error sending message: " + err.message);
+    }
   };
 
   return (
@@ -53,18 +68,24 @@ export default function Contact() {
         ></textarea>
         <button type="submit">Send Message</button>
       </form>
+
       <div className="contact-links">
-        <a href="mailto:your@email.com"><MdEmail  /></a>
-        <a href="https://github.com/Nk6513" target="_blank" rel="noopener noreferrer">
-          
-          <FaGithub  />
+        <a href="mailto:your@email.com">
+          <MdEmail />
+        </a>
+        <a
+          href="https://github.com/Nk6513"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub />
         </a>
         <a
           href="https://www.linkedin.com/in/nasir-khan-105102229/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedin  />
+          <FaLinkedin />
         </a>
       </div>
     </section>

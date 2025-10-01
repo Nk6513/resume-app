@@ -1,18 +1,22 @@
+/*=====================================================================*/
+/* Global Styles */
+/*=====================================================================*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
 }
- 
-          
-         
+
+/*=====================================================================*/
+/* Root Variables */
+/*=====================================================================*/
 :root {
   --color-primary: #191d2b;
-  --color-secondary: #aeae27; 
+  --color-secondary: #aeae27;
   --color-secondary1: #6ed89b;
   --color-secondary2: #474849;
-  --color-secondary3:  #d3f5e0;
+  --color-secondary3: #6a6d6b;
   --color-white: #ffffff;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -24,38 +28,37 @@
   --color-grey6: #12181b;
 }
 
-//=====================================================================//
-
+/*=====================================================================*/
+/* Main Styles */
+/*=====================================================================*/
 main {
   background-color: var(--color-primary);
-  min-height: 100vh; /* make it cover the full viewport */
+  min-height: 100vh;
 }
 
-//=====================================================================//
-
-
+/*=====================================================================*/
+/* Light Mode Overrides */
+/*=====================================================================*/
 .light-mode {
   --color-primary: #f3f5fa;
-  --color-secondary: #e02fd7;
-  --color-secondary1: #f3a8f0;  /* lighter pink/purple */
-  --color-secondary2: #ffd6f7;  /* very soft pastel */
-  --color-secondary3: #f0b0ff;  /* soft vibrant accent */
+  --color-secondary: #3dad18;
+  --color-secondary1: #ebcdd1;
+  --color-secondary2: #ba5c5c;
+  --color-secondary3: #8fc559;
   --color-white: #121111;
   --color-black: #000;
   --color-grey0: #f8f8f8;
   --color-grey1: #0875f2;
   --color-grey2: #909087;
-  --color-grey3: #dcb5b6;
-  --color-grey4: #1c03d4;
+  --color-grey3: #646464;
+  --color-grey4: #454e56;
   --color-grey5: #a4a4a0;
   --color-grey6: #12181b;
 }
 
-//=====================================================================//
-
-
-  /* toggle-button.scss */
-
+/*=====================================================================*/
+/* Toggle Button Styles */
+/*=====================================================================*/
 .toggle-div {
   position: relative;
   width: 50px;
@@ -69,44 +72,38 @@ main {
   align-items: center;
 
   &.active {
-    background-color: #4caf50; // Active color
+    background-color: #4caf50;
   }
+
   &:hover {
     background-color: darken(#ccc, 10%);
   }
 
   span {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-    
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }
 }
 
-
-
-//=====================================================================//
-
-
-  /* Indpendent button variable */
-
+/*=====================================================================*/
+/* Button Styles */
+/*=====================================================================*/
 .btn-con {
   display: flex;
   align-self: flex-start;
   padding-top: 10px;
 }
+
 .main-btn {
   border-radius: 30px;
   font-weight: 600;
-  // color: inherit;
   color: var(--color-white);
   position: relative;
   border: 1px solid var(--color-secondary);
   display: flex;
   align-items: center;
   overflow: hidden;
-  align-self: flex-start;
-  display: flex;
   z-index: 0;
   text-decoration: none;
 
@@ -126,6 +123,7 @@ main {
     z-index: 11;
     color: var(--color-white);
   }
+
   &::before {
     content: "";
     position: absolute;
@@ -135,29 +133,31 @@ main {
     transition: all 0.4s ease-out;
     z-index: 0;
   }
+
   &:hover {
     transition: all 0.4s ease-out;
+
     &::before {
       width: 100%;
       height: 100%;
       background-color: var(--color-secondary);
       transform: translateX(0);
-      transition: all 0.4s ease ease-out;
+      transition: all 0.4s ease-out;
     }
   }
 }
 
 button {
-  all: unset; /* Removes all browser styles */
+  all: unset;
   display: block;
 }
 
-//=====================================================================//
-
-//----NavBar Syles------
+/*=====================================================================*/
+/* Navbar Styles */
+/*=====================================================================*/
 .navbar {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--color-primary);
@@ -166,23 +166,12 @@ button {
 
 .logo-div {
   display: flex;
-  align-items: center;  
-  gap: 8px;              
+  align-items: center;
+  gap: 8px;
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--color-secondary);      
+  color: var(--color-secondary);
 }
-
-// .logo {
-//   font-size: 1.5rem;
-//   font-weight: bold;
-//   display: flex;
-//   align-items: center;
-//   gap: 8px;
-//   font-weight: bold;
-//   font-size: 1.2rem;
-//   color: var(--secondary); 
-// }
 
 .navbar .navLinks {
   list-style: none;
@@ -194,6 +183,7 @@ button {
   color: var(--color-white);
   text-decoration: none;
   transition: color 0.3s;
+  font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .navbar .navLinks li a:hover {
@@ -211,23 +201,18 @@ button {
   }
 }
 
-
-
-/* Responsive: stack on smaller screens */
+/* Responsive Navbar */
 @media (max-width: 666px) {
-  .navbar {
-    
+  .navbar .navLinks {
+    display: none;
   }
-
 }
 
-//=====================================================================//
-
-/* About styles */
-
+/*=====================================================================*/
+/* About Section Styles */
+/*=====================================================================*/
 .about-section {
   padding: 4rem 2rem;
-  // background-color: #f9fafb;
 
   .about-grid {
     display: grid;
@@ -241,19 +226,18 @@ button {
   .about-image {
     display: flex;
     justify-content: center;
-    
 
     .profile-img {
       border-radius: 12px;
       object-fit: cover;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      // transition: all 0.4s ease-in-out;
-      border: 2px solid transparent; // baseline border to avoid layout shift
-      transition: filter 0.4s ease-in-out, border-color 0.4s ease-in-out;
+      border: 2px solid transparent;
       filter: grayscale(100%);
+      transition: filter 0.4s ease-in-out, border-color 0.4s ease-in-out;
+
       &:hover {
         filter: grayscale(0);
-        border: 2px solid var(--color-secondary)
+        border: 2px solid var(--color-secondary);
       }
     }
   }
@@ -266,15 +250,14 @@ button {
       display: inline-block;
 
       &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 3px;
-      margin: 0.5rem auto 0;
-      background: var(--color-secondary);
-      border-radius: 2px;
-    }
-
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        margin: 0.5rem auto 0;
+        background: var(--color-secondary);
+        border-radius: 2px;
+      }
     }
 
     span {
@@ -290,7 +273,7 @@ button {
   }
 }
 
-/* Responsive: stack on smaller screens */
+/* Responsive About Section */
 @media (max-width: 768px) {
   .about-section .about-grid {
     grid-template-columns: 1fr;
@@ -304,9 +287,9 @@ button {
   }
 }
 
-//=====================================================================//
-
+/*=====================================================================*/
 /* Projects Section Styles */
+/*=====================================================================*/
 .projects-section {
   padding: 4rem 2rem;
   text-align: center;
@@ -343,20 +326,18 @@ button {
     position: relative;
     background: var(--color-primary);
     border: 1px solid transparent;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25),
-      0 0 8px rgba(var(--color-primary-rgb), 0.25); // subtle colored glow
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
 
     &:hover {
       transform: translateY(-5px);
       border: 1px solid var(--color-secondary);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4),
-        0 0 12px rgba(var(--color-secondary-rgb), 0.5); // brighter glow
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     }
 
     .card-inner {
       position: absolute;
-      inset: 0; // fills the card
+      inset: 0;
       padding: 1.5rem;
       display: flex;
       flex-direction: column;
@@ -374,7 +355,7 @@ button {
         max-height: 200px;
         max-width: 100%;
         height: auto;
-        margin: 0 auto; // centers inside flexbox
+        margin: 0 auto;
       }
     }
 
@@ -399,7 +380,7 @@ button {
 
       a {
         padding: 0.4rem 0.8rem;
-        background-color: var(--color-secondary2);
+        background-color: var(--color-grey4);
         color: white;
         border-radius: 6px;
         text-decoration: none;
@@ -414,7 +395,7 @@ button {
   }
 }
 
-/* Responsive adjustments */
+/* Responsive Projects Section */
 @media (max-width: 768px) {
   .projects-section {
     padding: 3rem 1rem;
@@ -424,15 +405,15 @@ button {
     }
 
     .projects-grid {
-      grid-template-columns: 1fr; // stack in 1 column
+      grid-template-columns: 1fr;
     }
 
     .project-card {
-      height: auto; // flexible height
+      height: auto;
       width: 100%;
 
       .card-inner {
-        position: relative; // reset from absolute
+        position: relative;
         inset: unset;
         height: auto;
       }
@@ -440,13 +421,11 @@ button {
   }
 }
 
-//=====================================================================//
-
-/* Contact styles */
-
+/*=====================================================================*/
+/* Contact Section Styles */
+/*=====================================================================*/
 .contact-section {
   padding: 4rem 2rem;
-  // background-color: #f3f4f6;
   text-align: center;
 
   h2 {
@@ -469,11 +448,9 @@ button {
 
   p {
     font-size: 1rem;
-    margin-bottom: 2rem;
-    color: #4b5563;
+    margin: 0.5rem auto 2rem;
     color: var(--color-grey3);
     max-width: 600px;
-    margin: 0.5rem auto 2rem;
     line-height: 1.5;
     opacity: 0.85;
   }
@@ -483,11 +460,11 @@ button {
     flex-direction: column;
     gap: 1rem;
     max-width: 500px;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 2rem;
     padding: 2rem;
-    background-color: var(--color-grey5); 
+    background-color: var(--color-grey5);
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 
     input,
     textarea {
@@ -502,8 +479,7 @@ button {
 
     button {
       padding: 0.8rem 1rem;
-      background-color: var(--color-secondary2);
-      // color: white;
+      background-color: var(--color-grey4);
       font-size: 1rem;
       border: none;
       border-radius: 8px;
@@ -523,18 +499,17 @@ button {
     flex-wrap: wrap;
 
     a {
-     display: flex;
-    align-items: center;   // vertically center
-    justify-content: center; // horizontally center
-    width: 50px;           // optional fixed width for square buttons
-    height: 50px;          // optional fixed height for square buttons
-    background-color: var(--color-secondary2);
-    color: white;
-    border-radius: 50%;    // make it circular
-    text-decoration: none;
-    font-size: 1.5rem;     // icon size
-    transition: background 0.3s;
-
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background-color: var(--color-secondary3);
+      color: white;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1.5rem;
+      transition: background 0.3s;
 
       &:hover {
         background-color: var(--color-secondary);
@@ -543,17 +518,16 @@ button {
   }
 }
 
-/* Responsive */
+/* Responsive Contact Section */
 @media (max-width: 768px) {
   .contact-section .contact-form {
     width: 100%;
   }
 }
 
-//=====================================================================//
-
-/* Footer styles */
-
+/*=====================================================================*/
+/* Footer Styles */
+/*=====================================================================*/
 .footer {
   background-color: var(--color-primary);
   color: #ffffff;
@@ -583,6 +557,8 @@ button {
       a {
         color: var(--color-grey3);
         text-decoration: none;
+        font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 400;
         transition: color 0.3s;
 
         &:hover {
@@ -593,34 +569,36 @@ button {
   }
 }
 
-/* Responsive small screens */
+/* Responsive Footer */
 @media (max-width: 768px) {
   .footer-content {
     gap: 0.5rem;
   }
 }
 
-//=====================================================================//
-
-// Digital Skills Syling
-
+/*=====================================================================*/
+/* Digital Skills Section */
+/*=====================================================================*/
 .digital-skills-section {
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
+  background-color: var(--color-bg-dark);
   text-align: center;
 
   .section-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: 700;
     color: var(--color-white);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 
     &::after {
       content: "";
       display: block;
-      width: 60%;
-      max-width: 180px;
-      height: 3px;
-      margin: 0.5rem auto 0;
+      width: 70px;
+      height: 4px;
+      margin: 0.75rem auto 0;
       background: var(--color-secondary);
       border-radius: 2px;
     }
@@ -628,52 +606,68 @@ button {
 
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
 
-    @media (max-width: 1024px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
-    @media (max-width: 768px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    @media (max-width: 480px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
     .skill-badge {
-      background-color: var(--color-primary);
+      background: linear-gradient(145deg, var(--color-primary), var(--color-primary-light));
       color: var(--color-white);
-      padding: 0.5rem 1rem;
-      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      border-radius: 16px;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: transform 0.3s, background-color 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      font-family: 'Poppins', sans-serif;
 
       &:hover {
-        background-color: var(--color-secondary);
-        transform: translateY(-3px);
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        background: linear-gradient(145deg, var(--color-secondary), var(--color-secondary-light));
+      }
+
+      .skill-name {
+        text-align: left;
       }
 
       .skill-percent {
-        font-size: 0.8rem;
-        margin-left: 0.5rem;
-        color: var(--color-secondary2);
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--color-secondary3);
+        min-width: 35px;
+        text-align: right;
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+
+    .section-title {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .skills-grid {
+      gap: 1rem;
+    }
+
+    .skill-badge {
+      font-size: 0.9rem;
+      padding: 0.75rem 1rem;
     }
   }
 }
 
-
 /*=====================================================================*/
 /* Education Section */
 /*=====================================================================*/
-
 .education-section {
   padding: 4rem 2rem;
   text-align: center;
