@@ -8,12 +8,13 @@ export default function About() {
       <div className="about-grid">
         <div className="about-image">
           <Image
-            src="/Profile.jpg"
+            src="/profile.jpg"
             alt="profile image"
             width={400}
             height={500}
             className="profile-img"
             priority
+            unoptimized
           />
         </div>
         <div className="about-text">
