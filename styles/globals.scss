@@ -9,6 +9,14 @@
 }
 
 /*=====================================================================*/
+/* Main Styles */
+/*=====================================================================*/
+main {
+  background-color: var(--color-primary);
+  min-height: 100vh;
+}
+
+/*=====================================================================*/
 /* Root Variables */
 /*=====================================================================*/
 :root {
@@ -28,13 +36,6 @@
   --color-grey6: #12181b;
 }
 
-/*=====================================================================*/
-/* Main Styles */
-/*=====================================================================*/
-main {
-  background-color: var(--color-primary);
-  min-height: 100vh;
-}
 
 /*=====================================================================*/
 /* Light Mode Overrides */
@@ -44,7 +45,7 @@ main {
   --color-secondary: #3dad18;
   --color-secondary1: #ebcdd1;
   --color-secondary2: #ba5c5c;
-  --color-secondary3: #8fc559;
+  --color-secondary3: #aeaeae;
   --color-white: #121111;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -52,7 +53,7 @@ main {
   --color-grey2: #909087;
   --color-grey3: #646464;
   --color-grey4: #454e56;
-  --color-grey5: #a4a4a0;
+  --color-grey5: #c4c4c4;
   --color-grey6: #12181b;
 }
 
@@ -171,6 +172,7 @@ button {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--color-secondary);
+  cursor: pointer;
 }
 
 .navbar .navLinks {
@@ -213,6 +215,7 @@ button {
 /*=====================================================================*/
 .about-section {
   padding: 4rem 2rem;
+  background-color: var(--color-grey5);
 
   .about-grid {
     display: grid;
@@ -286,7 +289,6 @@ button {
     justify-content: center;
   }
 }
-
 /*=====================================================================*/
 /* Projects Section Styles */
 /*=====================================================================*/
@@ -299,6 +301,7 @@ button {
     margin-bottom: 2rem;
     color: var(--color-white);
     display: inline-block;
+    font-weight: 600;
 
     &::after {
       content: "";
@@ -320,10 +323,10 @@ button {
   }
 
   .project-card {
-    height: 420px;
+    display: flex;
+    flex-direction: column;
     border-radius: 12px;
     overflow: hidden;
-    position: relative;
     background: var(--color-primary);
     border: 1px solid transparent;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -336,13 +339,12 @@ button {
     }
 
     .card-inner {
-      position: absolute;
-      inset: 0;
-      padding: 1.5rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      border-radius: 12px;
+      padding: 1.5rem;
+      height: 100%;
+      box-sizing: border-box;
     }
 
     .project-image {
@@ -354,15 +356,18 @@ button {
       img {
         max-height: 200px;
         max-width: 100%;
-        height: auto;
+        // height: auto;
         margin: 0 auto;
+        border-radius: 8px;
+        // transition: transform 0.3s ease;
       }
     }
 
     h3 {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
-      color: var(--color-grey2);
+      color: var(--color-white);
+      font-weight: 600;
     }
 
     p {
@@ -370,6 +375,50 @@ button {
       line-height: 1.5;
       color: var(--color-grey2);
       flex-grow: 1;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Tech List */
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+
+      .tech-item {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        background-color: var(--color-grey5);
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 0.3rem 0.6rem;
+        border-radius: 6px;
+        transition: background 0.3s, transform 0.3s;
+
+        &:hover {
+          // background-color: var(--color-secondary);
+          transform: scale(1.05);
+        }
+
+        .tech-icon {
+          font-size: 1rem;
+          display: inline-flex;
+          align-items: center;
+        }
+
+        .tech-react { color: #61dafb; }
+        .tech-tailwind { color: #38b2ac; }
+        .tech-js { color: #f7df1e; }
+        .tech-php { color: #777bb4; }
+        .tech-mui { color: #007fff; }
+
+        .tech-name {
+          margin-left: 0.25rem;
+        }
+      }
     }
 
     .project-links {
@@ -385,10 +434,12 @@ button {
         border-radius: 6px;
         text-decoration: none;
         font-size: 0.9rem;
-        transition: background 0.3s;
+        font-weight: 500;
+        transition: background 0.3s, transform 0.3s;
 
         &:hover {
           background-color: var(--color-secondary);
+          transform: scale(1.05);
         }
       }
     }
@@ -409,17 +460,20 @@ button {
     }
 
     .project-card {
-      height: auto;
       width: 100%;
 
       .card-inner {
-        position: relative;
-        inset: unset;
-        height: auto;
+        padding: 1rem;
+      }
+
+      .project-image img {
+        max-height: 180px;
       }
     }
   }
 }
+
+
 
 /*=====================================================================*/
 /* Contact Section Styles */
@@ -427,6 +481,7 @@ button {
 .contact-section {
   padding: 4rem 2rem;
   text-align: center;
+  background-color: var(--color-grey5);
 
   h2 {
     font-size: 2rem;
@@ -469,7 +524,7 @@ button {
     input,
     textarea {
       padding: 0.8rem 1rem;
-      border: 1px solid #d1d5db;
+      border: 1px solid #6b6b6b;
       border-radius: 8px;
       font-size: 1rem;
       width: 100%;
@@ -479,12 +534,15 @@ button {
 
     button {
       padding: 0.8rem 1rem;
-      background-color: var(--color-grey4);
+      background-color: var(--color-secondary3);
       font-size: 1rem;
       border: none;
       border-radius: 8px;
       cursor: pointer;
       transition: background 0.3s;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600; /* Semi-bold */
+      color: var(--color-white);
 
       &:hover {
         background-color: var(--color-secondary);
@@ -581,24 +639,22 @@ button {
 /*=====================================================================*/
 .digital-skills-section {
   padding: 3rem 1rem;
-  background-color: var(--color-bg-dark);
+  // background-color: var(--color-bg-dark);
   text-align: center;
 
-  .section-title {
-    font-size: 2.2rem;
-    font-weight: 700;
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
     color: var(--color-white);
-    margin-bottom: 2.5rem;
     position: relative;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    display: inline-block;
 
-    &::after {
+     &::after {
       content: "";
       display: block;
-      width: 70px;
-      height: 4px;
-      margin: 0.75rem auto 0;
+      width: 100%;
+      height: 3px;
+      margin: 0.5rem auto 0;
       background: var(--color-secondary);
       border-radius: 2px;
     }
@@ -629,6 +685,7 @@ button {
         transform: translateY(-5px) scale(1.05);
         box-shadow: 0 8px 25px rgba(0,0,0,0.25);
         background: linear-gradient(145deg, var(--color-secondary), var(--color-secondary-light));
+        color: var(--color-secondary);
       }
 
       .skill-name {
@@ -641,7 +698,7 @@ button {
         color: var(--color-secondary3);
         min-width: 35px;
         text-align: right;
-      }
+      } 
     }
   }
 
@@ -671,6 +728,7 @@ button {
 .education-section {
   padding: 4rem 2rem;
   text-align: center;
+  // background-color: var(--color-grey3);
 }
 
 .education-section h2 {
@@ -683,7 +741,6 @@ button {
 .education-section h2::after {
   content: "";
   display: block;
-  width: 164px;
   height: 3px;
   margin: 0.5rem auto 0;
   background: var(--color-secondary);
@@ -717,7 +774,7 @@ button {
 .education-card h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  color: var(--color-grey2);
+  color: var(--color-white);
 }
 
 .education-logo {
@@ -734,8 +791,8 @@ button {
 }
 
 .education-duration {
-  font-size: 0.95rem;
-  color: var(--color-grey3);
+  font-size: 1rem;
+  color: var(--color-secondary);
   margin-bottom: 1rem;
 }
 
@@ -752,7 +809,7 @@ button {
 /* Hide nav links in smaller screen*/
 /*=====================================================================*/
 
-@media (max-width: 666px) {
+@media (max-width: 866px) {
   .navbar .navLinks {
     display: none;
   }

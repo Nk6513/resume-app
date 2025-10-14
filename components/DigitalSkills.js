@@ -24,7 +24,7 @@ const skills = [
 export default function DigitalSkills() {
   return (
     <section id="digitalSkills" className="digital-skills-section">
-      <h2 className="section-title">Digital Skills</h2>
+      <h2>Digital Skills</h2>
       <div className="skills-grid">
         {skills.map((skill) => (
           <div key={skill.name} className="skill-badge" title={`${skill.percent}%`}>
