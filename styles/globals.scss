@@ -44,7 +44,7 @@ main {
   --color-primary: #f3f5fa;
   --color-secondary: #3dad18;
   --color-secondary1: #ebcdd1;
-  --color-secondary2: #ba5c5c;
+  --color-secondary2: #dee3d5;
   --color-secondary3: #aeaeae;
   --color-white: #121111;
   --color-black: #000;
@@ -639,7 +639,7 @@ button {
 /*=====================================================================*/
 .digital-skills-section {
   padding: 3rem 1rem;
-  // background-color: var(--color-bg-dark);
+  background-color: var(--color-secondary2);
   text-align: center;
 
   h2 {
