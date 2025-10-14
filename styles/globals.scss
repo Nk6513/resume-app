@@ -45,8 +45,8 @@ main {
 /* Light Mode Overrides */
 /*=====================================================================*/
 .light-mode {
-  --color-primary: #f3f5fa;
-  --color-secondary: #3dad18;
+  --color-primary: #c0b999;
+  --color-secondary: #be7a5f;
   --color-secondary1: #ebcdd1;
   --color-secondary2: #dee3d5;
   --color-secondary3: #aeaeae;
@@ -54,7 +54,7 @@ main {
   --color-black: #000;
   --color-grey0: #f8f8f8;
   --color-grey1: #0875f2;
-  --color-grey2: #909087;
+  --color-grey2: #353535;
   --color-grey3: #646464;
   --color-grey4: #454e56;
   --color-grey5: #c4c4c4;
@@ -182,7 +182,7 @@ button {
 .navbar .navLinks {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .navbar .navLinks li a {
@@ -193,7 +193,7 @@ button {
 }
 
 .navbar .navLinks li a:hover {
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 
 .navLinks li a {
@@ -338,7 +338,7 @@ button {
 
     &:hover {
       transform: translateY(-5px);
-      border: 1px solid var(--color-secondary);
+      // border: 1px solid var(--color-secondary);
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     }
 
@@ -349,6 +349,11 @@ button {
       padding: 1.5rem;
       height: 100%;
       box-sizing: border-box;
+      position: relative;
+      background: var(--color-secondary2);
+      border-radius: 10px;
+      padding: 1.5rem;
+      overflow: hidden;
     }
 
     .project-image {
@@ -366,64 +371,83 @@ button {
         // transition: transform 0.3s ease;
       }
     }
+.project-title {
+  display: inline-block;
+  align-self: flex-start;
+  margin: 1rem 0 0.75rem 0; /* space above and below */
+  background: var(--color-secondary);
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: fit-content;
+}
 
-    h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: var(--color-white);
-      font-weight: 600;
-    }
+/* keep description naturally below title */
+.project-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-grey2);
+  flex-grow: 1;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
 
-    p {
-      font-size: 1rem;
-      line-height: 1.5;
-      color: var(--color-grey2);
-      flex-grow: 1;
-      margin-bottom: 0.75rem;
-    }
 
     /* Tech List */
-    .tech-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+}
 
-      .tech-item {
-        display: flex;
-        align-items: center;
-        gap: 0.25rem;
-        background-color: var(--color-grey5);
-        color: white;
-        font-size: 0.8rem;
-        font-weight: 500;
-        padding: 0.3rem 0.6rem;
-        border-radius: 6px;
-        transition: background 0.3s, transform 0.3s;
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--color-grey5);
+  color: var(--color-grey2);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  transition: all 0.25s ease-in-out;
+}
 
-        &:hover {
-          // background-color: var(--color-secondary);
-          transform: scale(1.05);
-        }
+.tech-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
 
-        .tech-icon {
-          font-size: 1rem;
-          display: inline-flex;
-          align-items: center;
-        }
+.tech-icon {
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.9;
+}
 
-        .tech-react { color: #61dafb; }
-        .tech-tailwind { color: #38b2ac; }
-        .tech-js { color: #f7df1e; }
-        .tech-php { color: #777bb4; }
-        .tech-mui { color: #007fff; }
+/* Soft brand colors for icons */
+.tech-react { color: #61dafb; }
+.tech-tailwind { color: #38bdf8; }
+.tech-js { color: #facc15; }
+.tech-php { color: #8993be; }
+.tech-mui { color: #007fff; }
 
-        .tech-name {
-          margin-left: 0.25rem;
-        }
-      }
-    }
+.tech-name {
+  margin-left: 0.1rem;
+  opacity: 0.95;
+  color: var(--color-secondary)
+}
 
     .project-links {
       margin-top: 1rem;
@@ -433,7 +457,7 @@ button {
 
       a {
         padding: 0.4rem 0.8rem;
-        background-color: var(--color-grey4);
+        background-color: var(--color-secondary3);
         color: white;
         border-radius: 6px;
         text-decoration: none;

@@ -7,12 +7,12 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Event Booking Website",
-      description: "Full-stack event booking app — browse events and book tickets with a ready UI.",
+      title: "Event Booking",
+      description: "Full-stack event booking app — browse events and book tickets.",
       tech: ["React", "Material UI", "PHP"],
       github: "https://github.com/Nk6513/Event_ReactApp",
       live: "",
-      img: "/eventBooking.jpg",
+      img: "/EventBooking.svg",
     },
     {
       id: 2,
