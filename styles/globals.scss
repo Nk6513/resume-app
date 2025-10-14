@@ -609,12 +609,8 @@ button {
       color: var(--color-grey3);
     }
 
-    .footer-links,
-    .footer-social {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
+    .footer-links {
+      display: none; // hidden by default
 
       a {
         color: var(--color-grey3);
@@ -632,11 +628,21 @@ button {
 }
 
 /* Responsive Footer */
-@media (max-width: 768px) {
-  .footer-content {
-    gap: 0.5rem;
+@media (max-width: 866px) {
+  .footer {
+    .footer-content {
+      gap: 0.5rem;
+
+      .footer-links {
+        display: flex; // visible only on mobile
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+    }
   }
 }
+
 
 /*=====================================================================*/
 /* Digital Skills Section */
