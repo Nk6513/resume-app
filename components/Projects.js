@@ -8,7 +8,7 @@ export default function Projects() {
     {
       id: 1,
       title: "Event Booking",
-      description: "Full-stack event booking app — browse events and book tickets.",
+      description: "Full-stack event booking app — browse events and book tickets. Backend is still on the process",
       tech: ["React", "Material UI", "PHP"],
       github: "https://github.com/Nk6513/Event_ReactApp",
       live: "",
@@ -17,7 +17,7 @@ export default function Projects() {
     {
       id: 2,
       title: "Pizza Hub",
-      description: "Full-stack pizza app — manage menus, track orders, and monitor pending and recent orders at one dashboard.",
+      description: "Full-stack pizza restaurant app — manage menus, track orders at one dashboard.",
       tech: ["PHP", "HTML5", "Material UI"],
       github: "https://github.com/Nk6513/Pizza-Hub",
       live: "",
