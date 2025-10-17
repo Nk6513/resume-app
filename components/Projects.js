@@ -18,7 +18,7 @@ export default function Projects() {
       id: 2,
       title: "Pizza Hub",
       description: "Full-stack pizza restaurant app — manage menus, track orders at one dashboard.",
-      tech: ["PHP", "HTML5", "Material UI"],
+      tech: ["PHP","Material UI"],
       github: "https://github.com/Nk6513/Pizza-Hub",
       live: "",
       img: "/Pizzza.svg",
@@ -27,10 +27,10 @@ export default function Projects() {
       id: 3,
       title: "CityLens",
       description: "Explore any city instantly — see the weather, map, and Wikipedia info, all in one place!",
-      tech: ["React", "Tailwind", "JavaScript"],
+      tech: ["React", "Tailwind"],
       github: "https://github.com/Nk6513/Weather-app",
-      live: "",
-      img: "/Weather-amico.svg",
+      live: "https://city-lens-7hz7.vercel.app/",
+      img: "/cityLens.svg",
     },
   ];
 

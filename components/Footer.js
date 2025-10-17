@@ -1,7 +1,11 @@
-export default function Footer() {
+
+export default function Footer({toggleDiv}) {
   return (
     <footer className="footer">
       <div className="footer-content">
+         <div className="footer-toggle">
+          {toggleDiv}
+        </div>
         <p>© {new Date().getFullYear()} Nasir Khan. All rights reserved.</p>
         <div className="footer-links">
           <a href="#about">About</a>
@@ -10,6 +14,9 @@ export default function Footer() {
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>
+        
+         
+      
       </div>
     </footer>
   );

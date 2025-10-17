@@ -14,7 +14,7 @@ export default function Education() {
     {
       id: 2,
       degree: "MSc. Computer and System Engineering",
-      institution: "Technical university of Ilmenau",
+      institution: "Technical University of Ilmenau",
       duration: "2021 – Current",
       description:"Pursued a Master's in Computer and System Engineering with emphasis on advanced software engineering, system design, and research-driven projects.",
       logo: "/tu.png",

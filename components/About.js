@@ -26,7 +26,7 @@ export default function About() {
             </span>
             , a full-stack web developer passionate about building modern and
             user-friendly web applications. I enjoy working with Next.js, React,
-            PHP and SCSS to craft beautiful, responsive designs.
+            PHP, Tailwind and SCSS to craft beautiful, responsive designs.
           </p>
           <div className="btn-con">
             <a href="/Resume.pdf" download="Resume.pdf" className="main-btn">

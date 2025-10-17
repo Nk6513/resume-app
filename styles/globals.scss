@@ -26,7 +26,7 @@ main {
 :root {
   --color-primary: #191d2b;
   --color-secondary: #aeae27;
-  --color-secondary1: #bcd86e;
+  --color-secondary1: #dada88;
   --color-secondary2: #474849;
   --color-secondary3: #6a6d6b;
   --color-white: #ffffff;
@@ -81,7 +81,7 @@ main {
   }
 
   &:hover {
-    background-color: darken(#ccc, 10%);
+    background-color: var(--color-secondary2);
   }
 
   span {
@@ -141,6 +141,9 @@ main {
 
   &:hover {
     transition: all 0.4s ease-out;
+    .btn-text {
+      color: var(--color-secondary3) !important; 
+    }
 
     &::before {
       width: 100%;
@@ -337,8 +340,8 @@ button {
     transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
 
     &:hover {
-      transform: translateY(-5px);
-      // border: 1px solid var(--color-secondary);
+     // transform: translateY(-5px);
+      border: 1px solid var(--color-secondary);
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     }
 
@@ -354,6 +357,9 @@ button {
       border-radius: 10px;
       padding: 1.5rem;
       overflow: hidden;
+        &:hover {
+        background: var(--color-secondary3);
+      }
     }
 
     .project-image {
@@ -375,8 +381,8 @@ button {
         display: inline-block;
         align-self: flex-start;
         margin: 1rem 0 0.75rem 0; /* space above and below */
-        background: var(--color-secondary3);
-        color: var(--color-white);
+        background: var(--color-secondary1);
+        color: var(--color-black);
         font-size: 1rem;
         font-weight: 600;
         padding: 0.4rem 1rem;
@@ -387,7 +393,7 @@ button {
         letter-spacing: 0.5px;
         width: fit-content;
         font-family: 'Poppins', sans-serif;
-}
+} 
 
 /* keep description naturally below title */
     .project-description {
@@ -423,9 +429,6 @@ button {
       transition: all 0.25s ease-in-out;
 }
 
-    .tech-item:hover {
-      transform: translateY(-2px);
-}
 
     .tech-icon {
       font-size: 1.1rem;
@@ -444,7 +447,8 @@ button {
     .tech-name {
       margin-left: 0.1rem;
       opacity: 0.95;
-      color: var(--color-grey2)
+      color: var(--color-grey2);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .project-links {
@@ -455,7 +459,7 @@ button {
 
       a {
         padding: 0.4rem 0.8rem;
-        background-color: var(--color-secondary3);
+        background-color: var(--color-secondary1);
         color: var(--color-black);
         border-radius: 6px;
         text-decoration: none;
@@ -467,6 +471,7 @@ button {
         &:hover {
           background-color: var(--color-secondary);
           transform: scale(1.05);
+          color: white;
         }
       }
     }
@@ -531,7 +536,7 @@ button {
   p {
     font-size: 1rem;
     margin: 0.5rem auto 2rem;
-    color: var(--color-grey3);
+    color: var(--color-grey2);
     max-width: 600px;
     line-height: 1.5;
     opacity: 0.85;
@@ -544,7 +549,7 @@ button {
     max-width: 500px;
     margin: 0 auto 2rem;
     padding: 2rem;
-    background-color: var(--color-grey5);
+    background-color: var(--color-primary);
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 
@@ -555,13 +560,13 @@ button {
       border-radius: 8px;
       font-size: 1rem;
       width: 100%;
-      background-color: var(--color-grey5);
+      background-color: var(--color-secondary2);
       color: var(--color-white);
     }
 
     button {
       padding: 0.8rem 1rem;
-      background-color: var(--color-secondary3);
+      background-color: var(--color-secondary2);
       font-size: 1rem;
       border: none;
       border-radius: 8px;
@@ -573,6 +578,7 @@ button {
 
       &:hover {
         background-color: var(--color-secondary);
+        color: var(--color-secondary2);
       }
     }
   }
@@ -589,7 +595,7 @@ button {
       justify-content: center;
       width: 50px;
       height: 50px;
-      background-color: var(--color-secondary3);
+      background-color: var(--color-secondary1);
       color: white;
       border-radius: 50%;
       text-decoration: none;
@@ -615,7 +621,6 @@ button {
 /*=====================================================================*/
 .footer {
   background-color: var(--color-primary);
-  color: #ffffff;
   padding: 2rem 1rem;
   text-align: center;
 
@@ -628,10 +633,17 @@ button {
 
     p {
       margin: 0;
-      font-size: 0.9rem;
-      color: var(--color-grey3);
+      color: var(--color-grey2);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.8rem; /* Use a smaller size for the footer */
+      letter-spacing: 0.02em;
     }
 
+    .footer-toggle {
+      display: flex;
+      justify-content: center;
+    }
+   
     .footer-links {
       display: none; // hidden by default
 
@@ -701,7 +713,7 @@ button {
     margin: 0 auto;
 
     .skill-badge {
-      background: linear-gradient(145deg, var(--color-primary), var(--color-primary-light));
+      background: linear-gradient(145deg, var(--color-grey5), var(--color-primary-light));
       color: var(--color-white);
       padding: 1rem 1.25rem;
       border-radius: 16px;
@@ -717,18 +729,19 @@ button {
       &:hover {
         transform: translateY(-5px) scale(1.05);
         box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-        background: linear-gradient(145deg, var(--color-secondary), var(--color-secondary-light));
+        // background: linear-gradient(145deg, var(--color-secondary), var(--color-secondary-light));
         color: var(--color-secondary);
       }
 
       .skill-name {
         text-align: left;
+        color: var(--color-black)
       }
 
       .skill-percent {
         font-size: 0.85rem;
         font-weight: 500;
-        color: var(--color-secondary3);
+        color: var(--color-grey2);
         min-width: 35px;
         text-align: right;
       } 
@@ -791,7 +804,7 @@ button {
 .education-card {
   border-radius: 12px;
   padding: 1.5rem;
-  background: var(--color-primary);
+  background: var(--color-grey5);
   border: 1px solid transparent;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s, box-shadow 0.3s, border 0.3s;

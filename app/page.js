@@ -28,7 +28,7 @@ export default function Page() {
           <Projects />
           <Contact />
         </main>
-        <Footer />
+        <Footer toggleDiv = {<ToggleButton toggleClass={toggleClass} setToggleClass={setToggleClass} />}/>
       </div>
     </>
   );

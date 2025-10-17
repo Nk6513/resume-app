@@ -26,7 +26,7 @@ export default function Contact() {
       });
 
       if (res.ok) {
-        alert("Your message has been sent!");
+        // alert("Your message has been sent!");
         setFormData({ name: "", email: "", message: "" });
       } else {
         alert("Failed to send message. Please try again.");
@@ -40,6 +40,10 @@ export default function Contact() {
     <section id="contact" className="contact-section">
       <h2>Contact Me</h2>
       <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+
+      {/* <div className="form-success-message">
+        {res.ok && <p>Your message has been sent successfully.</p>}
+      </div> */}
 
       <form className="contact-form" onSubmit={handleSubmit}>
         <input
