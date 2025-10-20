@@ -39,7 +39,7 @@ const projects = [
     tech: ["React", "Tailwind"],
     github: "https://github.com/Nk6513/Weather-app",
     live: "https://city-lens-7hz7.vercel.app/",
-    img: "/cityLens-logo.svg",
+    img: "/CityLens-logo.svg",
   },
 ];
 
