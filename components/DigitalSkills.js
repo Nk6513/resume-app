@@ -1,6 +1,13 @@
 "use client";
+
+// ------------------------------------------
+// Imports
+// ------------------------------------------
 import React from "react";
 
+// ------------------------------------------
+// Skills Data
+// ------------------------------------------
 const skills = [
   { name: "HTML5", percent: 80 },
   { name: "CSS3", percent: 80 },
@@ -21,12 +28,19 @@ const skills = [
   { name: "Jest", percent: 60 },
 ];
 
+// ---------------------------------------------------
+// DigitalSkills Component
+// ---------------------------------------------------
 export default function DigitalSkills() {
   return (
+    // Wrapper section for Digital Skills
     <section id="digitalSkills" className="digital-skills-section">
       <h2>Digital Skills</h2>
+
+      {/*---------- Skills Grid ----------*/}
       <div className="skills-grid">
         {skills.map((skill) => (
+          // Individual skill badge
           <div key={skill.name} className="skill-badge" title={`${skill.percent}%`}>
             {skill.name}
             <span className="skill-percent">{skill.percent}%</span>

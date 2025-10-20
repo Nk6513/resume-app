@@ -1,20 +1,35 @@
 "use client";
 
+// ------------------------------------------
+// Imports
+// ------------------------------------------
 import { useState } from "react";
-import { MdEmail } from "react-icons/md";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 
+// ---------------------------------------------------
+// Contact Component
+// ---------------------------------------------------
 export default function Contact() {
+  // State to manage form input values
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
+  // State to handle success message
+  const [success, setSuccess] = useState(false);
+
+  // State to handle error messages
+  const [error, setError] = useState("");
+
+  // Handler for input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setSuccess(false);
+    setError("");
   };
 
+  // Handler for form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -26,25 +41,35 @@ export default function Contact() {
       });
 
       if (res.ok) {
-        // alert("Your message has been sent!");
+        setSuccess(true);
         setFormData({ name: "", email: "", message: "" });
+        // Reload page after 2 seconds
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
       } else {
-        alert("Failed to send message. Please try again.");
+        setError("Failed to send message. Please try again.");
       }
     } catch (err) {
-      alert("Error sending message: " + err.message);
+      setError("Error sending message. Please try again.");
     }
   };
 
   return (
+    // Wrapper section for Contact Me
     <section id="contact" className="contact-section">
       <h2>Contact Me</h2>
       <p>Feel free to reach out for collaborations or just a friendly hello!</p>
 
-      {/* <div className="form-success-message">
-        {res.ok && <p>Your message has been sent successfully.</p>}
-      </div> */}
+      {/*---------- Success / Error Messages ----------*/}
+      {success && (
+        <div className="success-message">
+          Your message has been sent successfully!
+        </div>
+      )}
+      {error && <div className="error-message">❌ {error}</div>}
 
+      {/*---------- Contact Form ----------*/}
       <form className="contact-form" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -72,26 +97,6 @@ export default function Contact() {
         ></textarea>
         <button type="submit">Send Message</button>
       </form>
-
-      <div className="contact-links">
-        <a href="mailto:your@email.com">
-          <MdEmail />
-        </a>
-        <a
-          href="https://github.com/Nk6513"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithub />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/nasir-khan-105102229/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin />
-        </a>
-      </div>
     </section>
   );
 }
