@@ -50,6 +50,7 @@ export default function About() {
               </span>
             </a>
           </div>
+          <div className="seperator"></div>
         </div>
       </div>
     </section>

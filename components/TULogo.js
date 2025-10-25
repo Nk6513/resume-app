@@ -1,7 +1,7 @@
 "use client";
 
 
-export const TULogo = ({fill={logoColor}}) => {
+export const TULogo = ({fill}) => {
   return (
 
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -10,8 +10,7 @@ export const TULogo = ({fill={logoColor}}) => {
 <metadata>
 Created by potrace 1.10, written by Peter Selinger 2001-2011
 </metadata>
-<g transform="translate(0.000000,101.000000) scale(0.100000,-0.100000)"
-fill={fill} stroke="none">
+<g transform="translate(0.000000,101.000000) scale(0.100000,-0.100000)" fill={fill} stroke="none">
 <path d="M1865 950 c-35 -33 -74 -60 -85 -60 -11 0 -20 -4 -20 -9 0 -5 10 -6
 22 -3 22 5 22 4 -5 -28 -77 -90 -104 -204 -58 -241 42 -34 103 -17 174 49 31
 30 33 26 12 -25 -8 -20 -13 -38 -10 -41 9 -9 21 11 34 56 9 33 25 52 74 91 34

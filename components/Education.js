@@ -33,7 +33,7 @@ const education = [
 // ---------------------------------------------------
 // Education Component
 // ---------------------------------------------------
-export default function Education({ logoColor }) {
+export default function Education({ uniLogoColor }) {
   return (
     // Wrapper section for Education
     <section id="education" className="education-section">
@@ -51,7 +51,8 @@ export default function Education({ logoColor }) {
                 {/*---------- Logo ----------*/}
                 {Logo && (
                   <div className="education-logo">
-                    <Logo priority fill={logoColor} width={200} height={300} />
+                    <Logo priority fill={uniLogoColor} width={200} height={300} />
+                    {/* <p>{uniLogoColor}</p> */}
                   </div>
                 )}
 

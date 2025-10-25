@@ -9,8 +9,7 @@ export const UOMLogo = ({fill}) => {
 <metadata>
 Created by potrace 1.10, written by Peter Selinger 2001-2011
 </metadata>
-<g transform="translate(0.000000,246.000000) scale(0.100000,-0.100000)"
-fill={fill} stroke="none">
+<g transform="translate(0.000000,246.000000) scale(0.100000,-0.100000)" fill={fill} stroke="none">
 <path d="M1420 2389 c-192 -22 -294 -56 -418 -139 -79 -53 -200 -165 -267
 -248 -15 -17 -32 -29 -37 -25 -6 3 -8 1 -5 -4 4 -6 -16 -48 -43 -93 -28 -46
 -50 -88 -50 -93 0 -6 -3 -8 -6 -5 -3 3 9 35 26 69 18 35 27 60 22 54 -22 -21

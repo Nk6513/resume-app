@@ -16,46 +16,46 @@ import ToggleButton from "@/components/ToggleButton";
 // ---------------------------------------------------
 // Main Page Component
 // ---------------------------------------------------
-export default function Page() {
-  // State to manage CSS toggle class for dark/light theme or layout changes
-  const [toggleClass, setToggleClass] = useState("");
 
-  // State to manage logo color dynamically (e.g., white in dark mode, black in light mode)
-  const [logoColor, setLogoColor] = useState("#fff");
+export default function Page() {
+
+// ---------------------------------------------------
+// Main Page Component
+// ---------------------------------------------------
+  const [toggleClass, setToggleClass] = useState("");
+  const [uniLogoColor, setUniLogoColor] = useState("#ffffff");
+
+  // Handler that flips state for the toggle and university logo color
+  const handleToggle = () => {
+    setToggleClass((prev) => (prev === "light-mode" ? "" : "light-mode"));
+    setUniLogoColor(uniLogoColor === "#ffffff" ? "#121212" : "#ffffff");
+  };
 
   return (
-    // Wrapper div that changes class based on toggle state 
+    // Wrapper div that changes class based on toggle state //
     <div className={toggleClass}>
-      {/*---------- Navigation Bar Section passed a toggle div as a prop ---------- */}
-      <NavBar
-        toggleDiv={
-          <ToggleButton
-            logoColor={logoColor}
-            setLogoColor={setLogoColor}
-            toggleClass={toggleClass}
-            setToggleClass={setToggleClass}
-          />
-        }
-      />
+
+      {/*---------- Navbar ---------- */}
+      <NavBar toggleDiv = {<ToggleButton onToggle={handleToggle}
+          logoUniColor={uniLogoColor}
+          setUniLogoColor={setUniLogoColor}
+          toggleClass={toggleClass}/>} />
 
       {/*---------- Main Section ---------- */}
       <main>
         <About />
-        <Education logoColor={logoColor} />
+        <Education uniLogoColor={uniLogoColor} />
         <DigitalSkills />
         <Projects />
         <Contact />
+      
       </main>
 
-      {/*---------- Footer Section with another toggle button for convenience ---------- */}
-      <Footer
-        toggleDiv={
-          <ToggleButton
-            toggleClass={toggleClass}
-            setToggleClass={setToggleClass}
-          />
-        }
-      />
+      {/*---------- Footer Section ---------- */}
+      <Footer toggleDiv={  <ToggleButton
+          onToggle={handleToggle}
+          toggleClass={toggleClass}
+        />} />
     </div>
   );
 }

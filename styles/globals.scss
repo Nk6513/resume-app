@@ -24,15 +24,16 @@ main {
 /* Root Variables */
 /*=====================================================================*/
 :root {
-  --color-primary: #191d2b;
-  --color-secondary: #9c9c1f;
-  --color-secondary1: #b9b976;
+  --color-primary: #1f1c1b;
+  --color-primary-top: #0d0d0d;
+  --color-secondary: #DB964C;
+  --color-secondary1: #d8b164;
   --color-secondary2: #474849;
   --color-secondary3: #6a6d6b;
   --color-white: #ffffff;
   --color-black: #000;
   --color-grey0: #f8f8f8;
-  --color-grey1: #c6cd83;
+  --color-grey1: #52bc10;
   --color-grey2: #b2becd;
   --color-grey3: #6c7983;
   --color-grey4: #454e56;
@@ -45,6 +46,7 @@ main {
 /*=====================================================================*/
 .light-mode {
   --color-primary: #a1a294;
+  --color-primary-top: #a2a295;
   --color-secondary: #6b6758;
   --color-secondary1: #a19d83;
   --color-secondary2: #aeab95;
@@ -52,7 +54,7 @@ main {
   --color-white: #121111;
   --color-black: #ffffff;
   --color-grey0: #f8f8f8;
-  --color-grey1: #272823;
+  --color-grey1: #9b160c;
   --color-grey2: #353535;
   --color-grey3: #646464;
   --color-grey4: #404d56;
@@ -115,7 +117,7 @@ main {
 
 .main-btn .btn-text {
   padding: 8px 2rem;
-  color: var(--color-grey2);
+  color: var(--color-white);
   transition: color 0.4s ease-out;
   z-index: 1;
 }
@@ -159,38 +161,40 @@ button {
 /*=====================================================================*/
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--color-primary);
+  padding: 1.5rem 3rem;
+  background-color: var(--color-primary-top); /* dark background like the image */
 }
 
 .logo-div {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--color-secondary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-secondary); /* orange accent like logo */
   cursor: pointer;
 }
 
 .navbar .navLinks {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   margin: 0;
   padding: 0;
 }
+
 .navbar .navLinks li a {
   position: relative;
   text-decoration: none;
   color: var(--color-white);
   padding: 4px 0;
   transition: color 0.3s ease;
-  font-family: "Poppins", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   letter-spacing: 0.5px;
+  font-size: 1rem;
 }
 
 .navbar .navLinks li a::after {
@@ -223,125 +227,113 @@ button {
 /* About Section Styles */
 /*=====================================================================*/
 .about-section {
-  padding: 4rem 2rem;
-  background-color: var(--color-grey5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  background-color: var(--color-primary-top); /* dark background */
+  color: var(--color-black);
+}
 
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  // border: 2px solid transparent;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease-in-out, border-color 0.4s ease-in-out, transform 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeSlideUp 1s forwards;
+  animation-delay: 0.3s;
+}
+
+.profile-img:hover {
+  filter: grayscale(0);
+  // border: 2px solid var(--color-secondary);
+}
+
+.about-text {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeSlideUp 1s forwards;
+  animation-delay: 0.6s;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  color: var(--color-white);
+}
+
+.about-text h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin: 0.5rem 0 0;
+  background: var(--color-secondary);
+  border-radius: 2px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-white);
+  font-family: "Poppins", sans-serif;
+  margin-top: 1rem;
+}
+
+
+.about-text span {
+  color: var(--color-secondary);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Animation Keyframes */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  .about-image {
-    display: flex;
-    justify-content: center;
-
-    .profile-img {
-      max-width: 300px;
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      object-fit: cover;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      border: 2px solid transparent;
-      filter: grayscale(100%);
-      transition: filter 0.4s ease-in-out, border-color 0.4s ease-in-out;
-
-      &:hover {
-        filter: grayscale(0);
-        border: 2px solid var(--color-secondary);
-      }
-    }
+/* Small Mobile Fix */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
   .about-text {
-    text-align: left;
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: var(--color-white);
-      display: inline-block;
-
-      &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 3px;
-        margin: 0.5rem 0 0;
-        background: var(--color-secondary);
-        border-radius: 2px;
-      }
-    }
-
-    span {
-      color: var(--color-secondary);
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: var(--color-grey2);
-      font-family: "Poppins", sans-serif;
-    }
-  }
-}
-
-/* ----------------------------------------------------------------- */
-/* 📱 SMALL MOBILE FIX (Below 550px) 📱 */
-/* ----------------------------------------------------------------- */
-@media (max-width: 550px) {
-  .about-section {
-    padding: 3rem 1rem;
-  }
-
-  .about-section .about-grid {
-    //  FIX: Change to single column for small phones
-    grid-template-columns: 1fr;
-    gap: 2rem; /* Reduced gap */
-  }
-
-  .about-section .about-text {
-    text-align: center;
-  }
-
-  .about-section .about-text h2::after {
-    margin: 0.5rem auto 0;
-  }
-}
-
-/* ----------------------------------------------------------------- */
-/* 💻 TABLET & LARGER MOBILE (Below 768px) 💻 */
-/* ----------------------------------------------------------------- */
-@media (max-width: 768px) {
-  .about-section .about-grid {
-    /* Ensure the 1fr stack is applied up to the tablet size */
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  /* Overrides for text alignment when stacked */
-  .about-section .about-text {
     text-align: center;
     padding: 0 1rem;
   }
-
-  .about-section .about-text h2::after {
-    /* Center the underline when text is centered */
-    margin: 0.5rem auto 0;
-  }
-
-  /* Fixes the button container alignment when stacked vertically */
-  .about-section .about-text .btn-con {
-    margin-top: 2rem;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-  }
 }
+
+
 /*=====================================================================*/
 /* Projects Section Styles */
 /*=====================================================================*/
@@ -650,7 +642,7 @@ button {
       transition: background 0.3s;
       font-family: "Poppins", sans-serif;
       font-weight: 600; /* Semi-bold */
-      color: var(--color-grey3);
+      color: var(--color-grey2);
 
       &:hover {
         background-color: var(--color-secondary);
@@ -680,7 +672,7 @@ button {
 /* Footer Styles */
 /*=====================================================================*/
 .footer {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-top);
   padding: 3rem 1rem;
   text-align: center;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -808,7 +800,7 @@ button {
         var(--color-grey5),
         var(--color-primary-light)
       );
-      color: var(--color-grey3);
+      color: var(--color-grey2);
       font-family: "Poppins", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-weight: 600;
       letter-spacing: 0.4px;
@@ -870,7 +862,7 @@ button {
 .education-section {
   padding: 4rem 2rem;
   text-align: center;
-  // background-color: var(--color-grey3);
+  background-color: var(--color-primary-top);
 }
 
 .education-section h2 {

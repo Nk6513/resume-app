@@ -15,7 +15,7 @@ export default function NavBar({ toggleDiv }) {
 
       {/*---------- Logo Section ----------*/}
       <div className="logo-div">
-        <span onClick={() => window.location.reload()}>RESUME</span>
+        <span onClick={() => window.location.reload()}>NK</span>
         <FaFileAlt size={32} />
       </div>
 
