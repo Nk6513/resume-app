@@ -26,14 +26,14 @@ main {
 :root {
   --color-primary: #1f1c1b;
   --color-primary-top: #0d0d0d;
-  --color-secondary: #DB964C;
+  --color-secondary: #db964c;
   --color-secondary1: #d8b164;
   --color-secondary2: #474849;
   --color-secondary3: #6a6d6b;
   --color-white: #ffffff;
   --color-black: #000;
   --color-grey0: #f8f8f8;
-  --color-grey1: #52bc10;
+  --color-grey1: #ced72a;
   --color-grey2: #b2becd;
   --color-grey3: #6c7983;
   --color-grey4: #454e56;
@@ -46,8 +46,8 @@ main {
 /*=====================================================================*/
 .light-mode {
   --color-primary: #a1a294;
-  --color-primary-top: #a2a295;
-  --color-secondary: #6b6758;
+  --color-primary-top: #8f8b74;
+  --color-secondary: #e9e6ca;
   --color-secondary1: #a19d83;
   --color-secondary2: #aeab95;
   --color-secondary3: #8a8a7b;
@@ -98,7 +98,7 @@ main {
 .btn-con {
   display: flex;
   align-self: flex-start;
-  padding-top: 10px;
+  margin-top: 20px;
 }
 
 .main-btn {
@@ -117,7 +117,7 @@ main {
 
 .main-btn .btn-text {
   padding: 8px 2rem;
-  color: var(--color-white);
+  color: var(--color-primary-light);
   transition: color 0.4s ease-out;
   z-index: 1;
 }
@@ -148,7 +148,15 @@ main {
 }
 
 .main-btn:hover .btn-text {
-  color: white;
+  color: var(--color-primary-top);
+}
+
+/* Responsive button */
+@media (max-width: 766px) {
+  .btn-con {
+    justify-content: center;
+    margin-top: 20px;
+  }
 }
 
 button {
@@ -164,7 +172,9 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 3rem;
-  background-color: var(--color-primary-top); /* dark background like the image */
+  background-color: var(
+    --color-primary-top
+  ); /* dark background like the image */
 }
 
 .logo-div {
@@ -192,7 +202,7 @@ button {
   padding: 4px 0;
   transition: color 0.3s ease;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.5px;
   font-size: 1rem;
 }
@@ -257,7 +267,8 @@ button {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   // border: 2px solid transparent;
   filter: grayscale(100%);
-  transition: filter 0.4s ease-in-out, border-color 0.4s ease-in-out, transform 0.6s ease, opacity 0.6s ease;
+  transition: filter 0.4s ease-in-out, border-color 0.4s ease-in-out,
+    transform 0.6s ease, opacity 0.6s ease;
   opacity: 0;
   transform: translateY(50px);
   animation: fadeSlideUp 1s forwards;
@@ -302,7 +313,6 @@ button {
   margin-top: 1rem;
 }
 
-
 .about-text span {
   color: var(--color-secondary);
   font-family: "Poppins", sans-serif;
@@ -333,7 +343,6 @@ button {
   }
 }
 
-
 /*=====================================================================*/
 /* Projects Section Styles */
 /*=====================================================================*/
@@ -346,6 +355,16 @@ button {
     color: var(--color-white);
     display: inline-block;
     font-weight: 600;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      margin: 0.5rem auto 0;
+      background: var(--color-secondary);
+      border-radius: 2px;
+    }
   }
 
   .projects-grid {
@@ -414,7 +433,6 @@ button {
 
       img {
         max-width: 85%;
-        max-height: 85%;
         object-fit: contain;
         border-radius: 10px;
       }
@@ -424,6 +442,7 @@ button {
       .project-title {
         color: var(--color-black);
         transition: color 0.3s ease;
+        background-color: var(--color-grey1)
       }
       .project-links a {
         color: var(--color-black);
@@ -446,7 +465,7 @@ button {
     .project-title {
       display: inline-block;
       align-self: flex-start;
-      margin: 1rem 0 0.75rem 0;
+      margin: 1rem 0 0.75rem -1.5rem; // negative left margin equals card padding
       background: var(--color-secondary3);
       color: var(--color-white);
       font-size: 1rem;
@@ -460,7 +479,6 @@ button {
       width: fit-content;
       font-family: "Poppins", sans-serif;
     }
-
     .project-description {
       font-size: 1rem;
       line-height: 1.5;
@@ -469,6 +487,7 @@ button {
       margin-bottom: 0.75rem;
       text-align: left;
       font-family: "Inter", sans-serif;
+      margin-left: -8px;
     }
 
     .tech-list {
@@ -530,8 +549,8 @@ button {
 
       a {
         padding: 0.4rem 0.8rem;
-        background-color: var(--color-secondary1);
-        color: var(--color-grey4);
+        background-color: var(--color-secondary3);
+        color: var(--color-grey2);
         border-radius: 6px;
         text-decoration: none;
         font-size: 0.9rem;
@@ -540,7 +559,7 @@ button {
         transition: background 0.3s, transform 0.3s;
 
         &:hover {
-          background-color: var(--color-secondary);
+          background-color: var(--color-grey1);
           // transform: scale(1.05);
           color: var(--color-white);
         }
@@ -634,7 +653,7 @@ button {
 
     button {
       padding: 0.8rem 1rem;
-      background-color: var(--color-secondary2);
+      background-color: var(--color-secondary1);
       font-size: 1rem;
       border: none;
       border-radius: 8px;
@@ -642,11 +661,11 @@ button {
       transition: background 0.3s;
       font-family: "Poppins", sans-serif;
       font-weight: 600; /* Semi-bold */
-      color: var(--color-grey2);
+      color: var(--color-white);
 
       &:hover {
         background-color: var(--color-secondary);
-        color: white;
+        color: var(--color-black);
       }
     }
   }

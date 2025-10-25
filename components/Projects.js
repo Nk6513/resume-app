@@ -15,7 +15,7 @@ const projects = [
     id: 1,
     title: "Event Booking",
     description:
-      "Full-stack event booking app — browse events and book tickets. Backend is still on the process",
+      "Event booking app. Browse events and book tickets. Backend is still in the process",
     tech: ["React", "Material UI", "PHP"],
     github: "https://github.com/Nk6513/Event_ReactApp",
     live: "",
