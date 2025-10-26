@@ -8,7 +8,7 @@ import { FaDownload } from "react-icons/fa";
 // ---------------------------------------------------
 // About Component
 // ---------------------------------------------------
-export default function About() {
+export default function About({uniLogoColor}) {
   return (
     // Wrapper section for About Me
     <section id="about" className="about-section">
@@ -46,7 +46,7 @@ export default function About() {
             <a href="/Resume.pdf" download="Resume.pdf" className="main-btn">
               <span className="btn-text">Download CV</span>
               <span className="btn-icon">
-                <FaDownload size={20} color="white" />
+                <FaDownload size={20} color={uniLogoColor} />
               </span>
             </a>
           </div>

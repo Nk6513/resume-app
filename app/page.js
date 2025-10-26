@@ -43,10 +43,10 @@ export default function Page() {
 
       {/*---------- Main Section ---------- */}
       <main>
-        <About />
+        <About uniLogoColor={uniLogoColor} />
         <Education uniLogoColor={uniLogoColor} />
         <DigitalSkills />
-        <Projects />
+        <Projects uniLogoColor={uniLogoColor} />
         <Contact />
       
       </main>

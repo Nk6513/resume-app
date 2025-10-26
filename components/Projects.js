@@ -57,7 +57,7 @@ const techIcons = {
 // ---------------------------------------------------
 // Projects Component
 // ---------------------------------------------------
-export default function Projects() {
+export default function Projects({uniLogoColor}) {
   return (
     // Wrapper section for Projects
     <section id="projects" className="projects-section">
