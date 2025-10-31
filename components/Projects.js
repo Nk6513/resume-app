@@ -38,7 +38,7 @@ const projects = [
       "Explore any city instantly — see the weather, map, and Wikipedia info, all in one place!",
     tech: ["React", "Tailwind"],
     github: "https://github.com/Nk6513/Weather-app",
-    live: "https://city-lens-7hz7.vercel.app/",
+    live: "https://citylens.nasirkhan.tech/",
     img: "/CityLens-logo.svg",
   },
 ];
