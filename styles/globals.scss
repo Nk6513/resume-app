@@ -33,7 +33,9 @@ main {
   --color-white: #ffffff;
   --color-black: #000;
   --color-grey0: #f8f8f8;
-  --color-grey1: #ced72a;
+  --color-grey1: #db964c;
+
+  // --color-grey1: #ced72a;
   --color-grey2: #b2becd;
   --color-grey3: #6c7983;
   --color-grey4: #454e56;
@@ -54,7 +56,8 @@ main {
   --color-white: #121111;
   --color-black: #ffffff;
   --color-grey0: #f8f8f8;
-  --color-grey1: #9b160c;
+  --color-grey1: #e9e6ca;
+  // --color-grey1: #9b160c;
   --color-grey2: #353535;
   --color-grey3: #646464;
   --color-grey4: #404d56;
@@ -402,7 +405,7 @@ button {
 
         .project-title,
         .project-links a {
-          color: var(--color-black);
+          color: var(--color-white);
           background-color: var(--color-grey1);
         }
 
