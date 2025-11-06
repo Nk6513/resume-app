@@ -43,7 +43,7 @@ export default function About({uniLogoColor}) {
 
           {/*---------- Download CV Button ----------*/}
           <div className="btn-con">
-            <a href="/Resume.pdf" download="Resume.pdf" className="main-btn">
+            <a href="/CV.pdf" download="CV.pdf" className="main-btn">
               <span className="btn-text">Download CV</span>
               <span className="btn-icon">
                 <FaDownload size={20} color={uniLogoColor} />
