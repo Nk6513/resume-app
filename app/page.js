@@ -12,6 +12,7 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ToggleButton from "@/components/ToggleButton";
+import Certifications from "@/components/Certifications";
 
 // ---------------------------------------------------
 // Main Page Component
@@ -46,6 +47,7 @@ export default function Page() {
         <About uniLogoColor={uniLogoColor} />
         <Education uniLogoColor={uniLogoColor} />
         <DigitalSkills />
+        <Certifications />
         <Projects uniLogoColor={uniLogoColor} />
         <Contact />
       

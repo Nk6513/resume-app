@@ -46,6 +46,7 @@ export default function Footer({ toggleDiv }) {
           <a href="#about">About</a>
           <a href="#education">Education</a>
           <a href="#digitalSkills">Skills</a>
+          <a href="#certifications">Certificates</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>

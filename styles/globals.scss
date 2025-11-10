@@ -960,3 +960,115 @@ button {
     display: none;
   }
 }
+
+/*=====================================================================*/
+/* Certifications section
+/*=====================================================================*/
+.certifications {
+  background-color: var(--color-primary-top);
+  padding: 4rem 2rem;
+  color: var(--color-white);
+  overflow: hidden;
+  text-align: center;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--color-white);
+    display: inline-block;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 3px;
+      margin: 0.5rem auto 0;
+      background: var(--color-secondary);
+      border-radius: 2px;
+    }
+  }
+
+  &__carousel {
+    width: 100%;
+    overflow: hidden;
+    scrollbar-width: none;
+  }
+
+  &__track {
+    display: flex;
+    gap: 1.5rem;
+    animation: scroll 25s linear infinite;
+    align-items: center;
+  }
+
+  &__card {
+    flex: 0 0 auto;
+    width: 320px;
+    height: 240px; // optional fixed height for consistency
+    border-radius: 1rem;
+    overflow: hidden;
+    // box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background: var(--color-grey5);
+    // border: 4px solid #3a3a3a; // frame-like border
+    padding: 0.5rem; // creates a little "frame edge"
+
+    .certifications__image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain; // keeps certificate fully visible
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+.certifications__track {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  animation: scroll 25s linear infinite; // default for large screens
+
+  @media (max-width: 978px) {
+    animation: scroll 18s linear infinite; // faster for smaller screens
+  }
+
+  @media (max-width: 768px) {
+    animation: scroll 15s linear infinite; // faster
+  }
+
+  @media (max-width: 666px) {
+    animation: scroll 12s linear infinite; // even faster
+  }
+
+  @media (max-width: 480px) {
+    animation: scroll 10s linear infinite; // mobile
+  }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-70%); }
+}
+
+@media (max-width: 768px) {
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-60%); }
+  }
+}
+
+@media (max-width: 666px) {
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-60%); }
+  }
+}
+
+@media (max-width: 480px) {
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-90%); }
+  }
+}
